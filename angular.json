@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/multiple-usage",
+            "outputPath": "dist/train-seat-checker",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
