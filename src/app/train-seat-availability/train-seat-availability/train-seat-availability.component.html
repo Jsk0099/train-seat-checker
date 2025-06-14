@@ -1,0 +1,21 @@
+<div>
+    <input type="number" [(ngModel)]="trainNumber" placeholder="Train Number"/>
+    <input type="text" [(ngModel)]="route" placeholder="Route"/>
+    <input type="date" [(ngModel)]="date" placeholder="Pick Date"/>
+    <button class="btn default-btn" (click)="fetchData()">
+        Fetch Data
+    </button>
+ </div>
+
+ <div [class.loader]="trainSearchXhr">
+    <div *ngFor="let i of coachList" class="coach-list">
+        <span class="coach-name">{{ i }}</span> 
+        <ul class="seat-number">
+            <li class="seat" *ngFor="let s of seatList[i]">
+                {{s.seatNumber}}: 
+                <ul class="route-list">
+                    <li class="route" *ngFor="let r of s.freeRoutes"> {{ r }}</li>
+                </ul>
+        </ul>
+    </div>
+ </div>

@@ -1,0 +1,60 @@
+li.seat {
+    border-right: 1px solid #909090;
+    border-bottom: 1px solid #909090;
+    padding: 5px 10px 5px 10px;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+ul.route-list {
+    font-weight: normal;
+}
+
+/* Default layout (for larger screens) */
+.seat-number {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px; /* space between items */
+}
+
+/* For very small screens, change the column minimum width */
+@media (max-width: 600px) {
+  .seat-number {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* smaller columns for smaller screens */
+  }
+}
+
+/* For medium screens (tablets) */
+@media (max-width: 1024px) {
+  .seat-number {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* larger columns for tablets */
+  }
+}
+
+.route{
+    margin-top: 5px;
+}
+
+.coach-name{
+    font-weight: bold;
+    font-size: 25px;
+    background: #ffdfe9;
+    color: rgb(0 22 255);
+    text-align: center;
+    letter-spacing: 7px;
+    display: block;
+}
+
+.coach-list{
+    border-bottom: 2px solid #929090;
+}
+
+
+.loader::before{
+    background: white;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    content: 'loading...';
+}

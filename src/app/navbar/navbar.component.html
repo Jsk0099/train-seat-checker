@@ -1,0 +1,8 @@
+<div class="navBarToggle">
+<div class="nav-container" *ngIf="navigationList.length">
+    <ul>
+      <li *ngFor="let item of navigationList;let i=index">
+        <button href='#' class="nav-btn" [id]="item.id" (click)="navigate(item.path,$event)">{{ item.displayName }}</button>
+      </li>
+    </ul>
+  </div>
